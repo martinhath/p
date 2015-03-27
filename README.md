@@ -10,11 +10,19 @@ echo "martiniscool" | wc
 ```
 
 ```bash
-ehco "martiniscool" | p | wc
+echo "martiniscool" | p | wc
 ----- p begin -----
 martiniscool
 ----- p end   -----
       1       1      13 #oh, okay.
 ```
 
-`-p` or `--prints` hides the pre- and post- output prints (eg. `----- p begin`).
+## Command line arguments
+| argument | long form | function|
+|----------|-----------|---------|
+| `-p`     | `--prints`| Shows header and footer |
+| `-c`     | `--color` | Colors the text |
+
+### Screenshot
+
+![screenshot](http://i.imgur.com/FhVlAty.png)

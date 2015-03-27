@@ -29,8 +29,6 @@ int main(int argc, char** argv) {
         else if (c == 'c') 
             colors = 1;
     }
-
-    printf("prints: %d\ncolors: %d\n", prints, colors);
     run();
 }
 
@@ -51,7 +49,7 @@ void run() {
     if (prints)
         print_end();
     if (colors)
-        fputs("\e[39m", stderr);
+        fputs("\e[0m", stderr);
 }
 
 size_t get_input(int* buffer) {
