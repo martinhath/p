@@ -1,5 +1,5 @@
 CC=clang
-FLAGS=-g -O2 -Weverything
+FLAGS=-g -O2 #-Weverything
 NAME=p
 
 main:

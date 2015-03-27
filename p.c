@@ -11,28 +11,37 @@ void print_start();
 void print_end();
 
 static int prints;
+static int colors;
 
 int main(int argc, char** argv) {
     int c;
     while(1) {
         static struct option long_options[] = {
-            {"prints", no_argument, &prints, 'p'}
+            {"print", no_argument, &prints, 0},
+            {"color", no_argument, &colors, 1}
         };
         int option_index = 0;
-        c = getopt_long(argc, argv, "p", long_options, &option_index);
+        c = getopt_long(argc, argv, "cp", long_options, &option_index);
         if (c == -1)
             break;
-        if (c == 'p')
+        else if (c == 'p')
             prints = 1;
+        else if (c == 'c') 
+            colors = 1;
     }
+
+    printf("prints: %d\ncolors: %d\n", prints, colors);
     run();
 }
 
 void run() {
     int buffer[BUFFER_SIZE];
     size_t n;
+    if (colors)
+        fputs("\e[90;2m", stderr);
     if (prints)
         print_start();
+
 
     while((n = get_input(buffer)) != 0)
         print_output(buffer, n);
