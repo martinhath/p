@@ -16,3 +16,5 @@ martiniscool
 ----- p end   -----
       1       1      13 #oh, okay.
 ```
+
+`-p` or `--prints` hides the pre- and post- output prints (eg. `----- p begin`).
