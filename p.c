@@ -17,6 +17,8 @@ int main() {
     while((n = get_input(buffer)) != 0)
         print_output(buffer, n);
 
+    putc('\n', stdout);
+    putc('\n', stderr);
     print_end();
 }
 
@@ -31,7 +33,6 @@ size_t get_input(int* buffer) {
 }
 
 size_t print_output(int* buffer, size_t n) {
-    printf("Printing %zu bytes.\n", n);
     for (size_t i = 0; i < n; i++) {
         putc(buffer[i], stderr);
         putc(buffer[i], stdout);
@@ -44,6 +45,6 @@ void print_start() {
 }
 
 void print_end() {
-    fprintf(stderr, "\n----- p end   -----\n");
+    fprintf(stderr, "----- p end   -----\n");
 }
 

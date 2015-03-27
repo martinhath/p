@@ -10,9 +10,9 @@ echo "martiniscool" | wc
 ```
 
 ```bash
-> ehco "martiniscool" | p | wc
-> ----- p begin -----
-> martiniscool
-> ----- p end   -----
->     1       4      31 #oh, okay.
+ehco "martiniscool" | p | wc
+----- p begin -----
+martiniscool
+----- p end   -----
+      1       1      13 #oh, okay.
 ```
