@@ -50,6 +50,8 @@ void run() {
     putc('\n', stderr);
     if (prints)
         print_end();
+    if (colors)
+        fputs("\e[39m", stderr);
 }
 
 size_t get_input(int* buffer) {
